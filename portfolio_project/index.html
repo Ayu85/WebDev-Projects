@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css ">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    keyframes: {
+                        wiggle: {
+                            '50%': 'left: 33% top: 4% scale: 1.11 '
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-black">
+    <div id="wrapper" class="relative">
+        <!-- absolute circles -->
+        <div class="bg-orange-500 absolute h-48 w-48 rounded-full left-96 top-24 " id="circle1"> </div>
+        <div class="bg-blue-500 absolute  h-48 w-48 rounded-full left-[130vh] top-96" id="circle2"></div>
+        <!-- circles over -->
+        <!-- card starts -->
+        <div>
+            <div><img src="A:\DOWNLOADS\ayush.jpg" alt=""></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
