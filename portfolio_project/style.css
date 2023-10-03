@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 #circle1 {
   animation: move 8s infinite;
@@ -12,13 +17,68 @@
 }
 @keyframes move {
   50% {
-    left: 80vh;
+    left: 70vh;
     scale: 1.1;
   }
 }
 @keyframes move2 {
   50% {
-    left: 115vh;
+    left: 127vh;
     scale: 1.1;
   }
+}
+#Name {
+  font-family: "Rubik", sans-serif;
+}
+
+#role {
+  font-family: "Rubik", sans-serif;
+  margin-top: -15px;
+}
+#card {
+  border: 1px solid gray;
+}
+.btn {
+  border: 1px solid white;
+  color: white;
+  font-size: small;
+  padding: 5px;
+  width: 18vh;
+  border-radius: 5px;
+  margin: 3px;
+}
+.btn:hover {
+  background: rgba(0, 0, 0, 0.508);
+}
+#modal {
+  font-family: "Rubik", sans-serif;
+  border: 1px solid rgb(161, 159, 159);
+  position: fixed;
+  opacity: 0;
+  transition: 0.5s all ease-in-out;
+}
+.line {
+  border: 1px solid rgb(137, 136, 136);
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+#overlay {
+  position: absolute; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    171,
+    167,
+    167,
+    0.367
+  ); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  transition: 1s all ease-in-out;
 }

@@ -23,21 +23,47 @@
 </head>
 
 <body class="bg-black">
-    <div id="wrapper" class="relative">
+
+    <div id="wrapper" class="relative flex justify-center items-center h-[100vh]">
         <!-- absolute circles -->
         <div class="bg-orange-500 absolute h-48 w-48 rounded-full left-96 top-24 " id="circle1"> </div>
         <div class="bg-blue-500 absolute  h-48 w-48 rounded-full left-[130vh] top-96" id="circle2"></div>
         <!-- circles over -->
         <!-- card starts -->
-        <div>
-            <div><img src="A:\DOWNLOADS\ayush.jpg" alt=""></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="bg-[#d5d5d52d] backdrop-blur-md w-80 h-96 rounded-md flex justify-center items-center flex-col gap-6 "
+            id="card">
+            <div><img src="ayush.jpg" class="w-36 rounded-full" alt=""></div>
+            <div class="text-white text-3xl" id="Name">Aayush Singh</div>
+            <div class="text-slate-500" id="role">SDE,Amazon</div>
+            <div>
+                <button class="btn btn_share">Share my profile</button>
+                <button class="btn btn_follow">Follow me</button>
+            </div>
         </div>
 
-    </div>
+        <div id="overlay"></div>
+        <!-- *******************modal opening code ***********************-->
+        <div class=" bg-[#00000090] backdrop-blur-lg z-50 w-[60vh] rounded-xl h-48 absolute" id="modal">
+            <div class="flex justify-between pl-4 pr-4 mt-2">
+                <h2 class="text-white text-xl font-base">Share My Profile</h2>
+                <button class="text-white" id="cut_btn">&#10006;</button>
+            </div>
+            <div class="w-[55vh] line "></div>
+            <div class="text-white font-base  pl-4 pr-4 mt-5">share this via</div>
+            <div class="flex justify-between pl-5 pr-5 mt-5">
+                <img src="icons8-facebook-48.png" class="hover:cursor-pointer fb_icon" alt="">
+                <img src="whsp.png" class="hover:cursor-pointer whatsapp_icon" alt="">
+                <img src="insta.png" class="hover:cursor-pointer insta_icon" alt="">
+                <img src="twt.png" class="hover:cursor-pointer twitter_icon" alt="">
+                <img src="telegram.png" class="hover:cursor-pointer telegram_icon" alt="">
+            </div>
+        </div>
 
+
+
+
+    </div>
+    <!-- this is wrapper class div ending -->
 
     <script src="app.js"></script>
 </body>
