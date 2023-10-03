@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#main_box {
+}
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.pass_heading {
+  font-size: 1.6rem;
+  backdrop-filter: blur(55px);
+  color: white;
+  text-align: center;
+}
+.pass_output {
+  background-color: #090909b1;
+  height: 7vh;
+  border-radius: 15px;
+  color: goldenrod;
+  padding-left: 2vh;
+  padding-top: 1vh;
+  font-size: larger;
+  font-weight: bolder;
+  letter-spacing: 0.1ch;
+  position: relative;
+}
