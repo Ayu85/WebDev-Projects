@@ -1,11 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
 }
-#main_box {
-}
+
 #wrapper {
   width: 100%;
   height: 100vh;
@@ -18,19 +18,61 @@
 }
 .pass_heading {
   font-size: 1.6rem;
-  backdrop-filter: blur(55px);
   color: white;
   text-align: center;
+  font-family: "Kanit", sans-serif;
 }
 .pass_output {
   background-color: #090909b1;
   height: 7vh;
-  border-radius: 15px;
-  color: goldenrod;
+  border-radius: 10px;
+  color: #ffc42e;
   padding-left: 2vh;
   padding-top: 1vh;
   font-size: larger;
   font-weight: bolder;
   letter-spacing: 0.1ch;
   position: relative;
+  margin-top: 3vh;
+}
+#copy_btn {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  top: 9px;
+}
+#password_generator {
+  background-color: #090909b1;
+  height: 55vh;
+  margin-top: 3vh;
+  border-radius: 10px;
+  font-family: "Kanit", sans-serif;
+}
+
+input[type="range"] {
+  width: 40vh;
+  height: 5vh;
+}
+#strength_indicator {
+  box-shadow: 2px 2px 10px 8px red;
+}
+#generate_btn {
+  background-color: rgb(43, 43, 255);
+  width: 40vh;
+  height: 6vh;
+  margin-left: 50px;
+  margin-top: 10px;
+  box-shadow: 5px 5px #ffc42e;
+  border-radius: 15px;
+  letter-spacing: 0.2ch;
+  font-size: larger;
+  color: white;
+  font-weight: bolder;
+}
+#generate_btn:hover {
+  background: #000;
+  color: white;
+  border: 1px solid white;
+  transition: 0.2s all ease-in-out;
+  box-shadow: 5px 5px white;
 }
