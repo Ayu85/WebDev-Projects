@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #wrapper {
@@ -40,6 +40,13 @@
   right: 15px;
   cursor: pointer;
   top: 9px;
+}
+#passwordCopied{
+  position: absolute;
+  right: 0px;
+  top: -30px;
+  opacity: 0;
+  transition: .5s all ease-in-out;
 }
 #password_generator {
   background-color: #090909b1;
