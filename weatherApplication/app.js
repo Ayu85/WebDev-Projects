@@ -8,6 +8,7 @@ const grantAccessButton = document.getElementById("grant_access_btn");
 const grantLocationContainer = document.getElementById(
   "grant_location_container"
 );
+const locationArea = document.getElementById("location_area");
 // const place = document.getElementById("place");
 // const weatherState = document.getElementById("weather_state");
 // const temp = document.getElementById("temperature");
@@ -22,7 +23,8 @@ function hideSearchWeatherUT() {
   locationSearchContainer.classList.add("hidden");
 }
 function showYourWeatherUI() {
-  yourWeatherContainer.classList.remove("hidden");
+  if (grantLocationContainer.classList.contains("hidden"))
+    yourWeatherContainer.classList.remove("hidden");
 }
 function hideYourWeatherUI() {
   yourWeatherContainer.classList.add("hidden");
@@ -71,13 +73,20 @@ async function getCityUsingCoords(position) {
   try {
     const response = await fetch(url, options);
     var result = await response.json();
+    console.log(result);
+    renderWeather(result);
+    return result;
   } catch (error) {
     console.error(error);
   }
-  console.log(result);
   yourWeatherContainer.classList.remove("hidden");
+  yourWeatherContainer.classList.add("flex");
 }
-function renderWeather() {}
+//function to render the data on ui
+function renderWeather(result) {
+  let res = { ...result };
+  locationArea.innerText = res.location.name;
+}
 
 /*const weatherCondition = document.getElementById("weatherCondition");
 let cityname = " mumbai";
