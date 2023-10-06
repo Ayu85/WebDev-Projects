@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Gabarito";
+}
+:root {
+  --colordark1: #112d4e;
+  --colordark2: #3f72af;
+  --colorlight1: #dbe2ef;
+  --colorlight2: #f9f7f7;
+}
+#wrapper {
+  background-color: var(--colordark1);
+  color: var(--colorlight1);
+  background: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+.currentTab {
+  background: #dbe2ef80;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

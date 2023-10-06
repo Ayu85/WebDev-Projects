@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayu-Weather </title>
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1 class="">Ayu-Weather</h1>
+    <div id="wrapper" class=" h-[100vh] w-[100vw] ">
+        <!-- weather heading -->
+        <h1 class="text-center text-4xl mt-4" id="weatherHead">WEATHER APP</h1>
+        <!-- two tabs -->
+        <div id="tabs"
+            class="flex cursor-pointer justify-between max-w-[550px] w-[90%] ml-[50%] -translate-x-[50%] mt-5 text-base">
+            <p id="your_weather" class="currentTab ">Your Weather</p>
+            <p id="search_weather">Search Weather</p>
+        </div>
+        <!-- grant location container -->
+        <div class="ml-[50%]  -translate-x-[50%] flex  flex-col items-center mt-5 gap-2 text-base  ">
+            <img src="locationIcon.png" class="w-16" alt="">
+            <p class="text-center">Grant Locaion Access</p>
+            <p class="text-center">Allow location access to get your current location</p>
+            <button class="bg-[#69a6f27f] py-1 text-lg pl-4 pr-4">Grant Access</button>
+        </div>
+        <!-- location search container -->
+        <div class="ml-[50%]  -translate-x-[50%] flex  justify-between w-max items-center mt-8 gap-2">
+            <input type="text" placeholder="search the city..." name="" id="city" class="w-64 text-black pl-3">
+            <button class="bg-[#69a6f27f] pl-2 pr-2 -ml-2 "><img src="searchimg.png" class="w-5 py-[2px] "
+                    alt=""></button>
+        </div>
+        <!-- weather data container on main page -->
+        <div class="ml-[50%]  -translate-x-[50%]  flex flex-col items-center mt-4 ">
+            <div class="flex justify-center items-center">
+                <!-- location name and flag -->
+                <p class="text-2xl">Location</p>
+                <img src="" alt="falied" class="ml-2">
+            </div>
+            <div class="text-xl" id="weatherCondition">
+                <!-- weather condition -->
+                condition
+            </div>
+            <div class="mt-2">
+                <!-- weather condition image -->
+                <img src="" alt="falied">
+            </div>
+            <div class="text-3xl">
+                <!-- temperature -->
+                temp
+            </div>
+            <div class="flex gap-4 flex-wrap   items-center justify-center mt-5">
+                <!-- three divs container of weather data -->
+                <div class="bg-[#dbe2ef80] w-36 h-24 flex flex-col justify-center  items-center">
+                    <!-- box1 -->
+                    <img src="" alt="stateimg">
+                    <p>state</p>
+                    <p>statevalue</p>
+                </div>
+                <div class="bg-[#dbe2ef80] w-36 h-24 flex flex-col justify-center  items-center">
+                    <!-- box2 -->
+                    <img src="" alt="stateimg">
+                    <p>state</p>
+                    <p>statevalue</p>
+                </div>
+                <div class="bg-[#dbe2ef80] w-36 h-24 flex flex-col justify-center  items-center">
+                    <!-- box3 -->
+                    <img src="" alt="stateimg">
+                    <p>state</p>
+                    <p>statevalue</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="app.js"></script>
+
 </html>
