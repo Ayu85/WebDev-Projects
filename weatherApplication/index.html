@@ -17,25 +17,27 @@
         <h1 class="text-center text-4xl mt-4" id="weatherHead">WEATHER APP</h1>
         <!-- two tabs -->
         <div id="tabs"
-            class="flex cursor-pointer justify-between max-w-[550px] w-[90%] ml-[50%] -translate-x-[50%] mt-5 text-base">
+            class="flex cursor-pointer justify-between max-w-[550px] w-[90%] ml-[50%] fixed -translate-x-[50%] mt-5 text-base">
             <p id="your_weather" class="currentTab ">Your Weather</p>
             <p id="search_weather">Search Weather</p>
         </div>
         <!-- grant location container -->
-        <div class="ml-[50%]  -translate-x-[50%] flex  flex-col items-center mt-5 gap-2 text-base  ">
-            <img src="locationIcon.png" class="w-16" alt="">
+        <div class="ml-[50%]  -translate-x-[50%] flex  flex-col items-center mt-20 gap-2 text-base  ">
+            <img src="locationIcon.png" class="w-16" alt=""> 
             <p class="text-center">Grant Locaion Access</p>
             <p class="text-center">Allow location access to get your current location</p>
             <button class="bg-[#69a6f27f] py-1 text-lg pl-4 pr-4">Grant Access</button>
         </div>
         <!-- location search container -->
-        <div id="location_search_container" class="hidden absolute top-32 ml-[50%]  -translate-x-[50%] flex  justify-between w-max items-center mt-8 gap-2">
-            <input type="text" placeholder="search the city..." name="" id="city" class="w-80 text-white placeholder:text-white pl-3 rounded-lg bg-[#dbe2ef80]">
+        <div id="location_search_container"
+            class="hidden absolute top-32 ml-[50%]  -translate-x-[50%] flex  justify-between w-max items-center mt-8 gap-2">
+            <input type="text" placeholder="search the city..." name="" id="city"
+                class="w-80 text-white placeholder:text-white pl-3 rounded-lg bg-[#dbe2ef80]">
             <button class="bg-[#69a6f27f] pl-2 pr-2  rounded-full "><img src="searchimg.png" class="w-5 py-[2px] "
                     alt=""></button>
         </div>
         <!-- weather data container on main page -->
-        <div class="ml-[50%]  -translate-x-[50%]  flex flex-col items-center mt-4 ">
+        <div id="your_weather_container" class="ml-[50%]  -translate-x-[50%]  flex flex-col items-center mt-4 ">
             <div class="flex justify-center items-center">
                 <!-- location name and flag -->
                 <p class="text-2xl">Location</p>

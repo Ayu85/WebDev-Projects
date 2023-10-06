@@ -19,10 +19,12 @@
   background: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
 }
 .currentTab {
+  box-sizing: border-box;
   background: #dbe2ef80;
   border-radius: 10px;
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
+  transition: 0.5s ease;
 }

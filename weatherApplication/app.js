@@ -3,22 +3,37 @@ const searchWeatherButton = document.getElementById("search_weather");
 const locationSearchContainer = document.getElementById(
   "location_search_container"
 );
+const yourWeatherContainer = document.getElementById("your_weather_container");
 // const place = document.getElementById("place");
 // const weatherState = document.getElementById("weather_state");
 // const temp = document.getElementById("temperature");
 // const weatherStateImage = document.getElementById("weather_state_image");
 // const url = "https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13";
-function showYourWeatherUI() {
+function showSearchWeatherUI() {
   locationSearchContainer.classList.remove("hidden");
 }
-function hideYourWeatherUT() {
+function hideSearchWeatherUT() {
   locationSearchContainer.classList.add("hidden");
 }
+function showYourWeatherUI() {
+  yourWeatherContainer.classList.remove("hidden");
+}
+function hideYourWeatherUI() {
+  yourWeatherContainer.classList.add("hidden");
+}
 searchWeatherButton.addEventListener("click", () => {
-  showYourWeatherUI();
+  searchWeatherButton.classList.add("currentTab")
+  yourWeatherButton.classList.remove("currentTab")
+
+  showSearchWeatherUI();
+  hideYourWeatherUI();
 });
 yourWeatherButton.addEventListener("click", () => {
-  hideYourWeatherUT();
+  yourWeatherButton.classList.add("currentTab")
+  searchWeatherButton.classList.remove("currentTab");
+  hideSearchWeatherUT();
+  showYourWeatherUI();
+
 });
 const weatherCondition = document.getElementById("weatherCondition");
 let cityname = " mumbai";
