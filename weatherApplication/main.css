@@ -28,3 +28,6 @@
   padding-bottom: 5px;
   transition: 0.5s ease;
 }
+#temp_render ,#location_area{
+  font-family: "Onest", sans-serif;
+}

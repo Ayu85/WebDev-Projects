@@ -9,6 +9,12 @@ const grantLocationContainer = document.getElementById(
   "grant_location_container"
 );
 const locationArea = document.getElementById("location_area");
+const weatherCondition = document.getElementById("weather_condition");
+const temperatureRender = document.getElementById("temp_render");
+const windSpeedRender = document.getElementById("wind_speed_value");
+const humidityRender = document.getElementById("humidity_value");
+const cloudsRender = document.getElementById("clouds_value");
+const loader = document.getElementById("loader");
 // const place = document.getElementById("place");
 // const weatherState = document.getElementById("weather_state");
 // const temp = document.getElementById("temperature");
@@ -61,6 +67,7 @@ async function getCityUsingCoords(position) {
   let longitude = position.coords.longitude.toFixed(2);
   console.log("Latitude: " + latitude + "<br>Longitude: " + longitude);
   grantLocationContainer.classList.add("hidden");
+  loader.classList.remove("hidden");
   const url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${latitude}%2C${longitude}`;
   const options = {
     method: "GET",
@@ -74,18 +81,26 @@ async function getCityUsingCoords(position) {
     const response = await fetch(url, options);
     var result = await response.json();
     console.log(result);
+    loader.classList.add("hidden");
+    showYourWeatherUI();
     renderWeather(result);
     return result;
   } catch (error) {
     console.error(error);
   }
+
   yourWeatherContainer.classList.remove("hidden");
-  yourWeatherContainer.classList.add("flex");
+  // showYourWeatherUI();
 }
 //function to render the data on ui
 function renderWeather(result) {
   let res = { ...result };
   locationArea.innerText = res.location.name;
+  weatherCondition.innerText = res.current.condition.text;
+  temperatureRender.innerText = `${res.current.temp_c} 	\xB0 C`;
+  windSpeedRender.innerText = `${res.current.wind_kph} kph`;
+  humidityRender.innerText = `${res.current.humidity} %`;
+  cloudsRender.innerText = `${res.current.cloud} %`;
 }
 
 /*const weatherCondition = document.getElementById("weatherCondition");
