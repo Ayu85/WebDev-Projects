@@ -40,10 +40,50 @@
         <!-- location search container -->
         <div id="location_search_container"
             class="hidden absolute top-32 ml-[50%]  -translate-x-[50%] flex  justify-between w-max items-center mt-8 gap-2">
-            <input type="text" placeholder="search the city..." name="" id="city"
+            <input type="text" placeholder="search the city..." name="" id="city_input"
                 class="w-80 text-white placeholder:text-white pl-3 rounded-lg bg-[#dbe2ef80]">
-            <button class="bg-[#69a6f27f] pl-2 pr-2  rounded-full "><img src="searchimg.png" class="w-5 py-[2px] "
-                    alt=""></button>
+            <button class="bg-[#69a6f27f] pl-2 pr-2  rounded-full " id="search_button"><img src="searchimg.png"
+                    class="w-5 py-[2px] " alt=""></button>
+        </div>
+        <!-- weather data container on search page -->
+
+        <div id="search_weather_render"
+            class=" fixed hidden ml-[50%]  -translate-x-[50%]  flex flex-col items-center mt-36 gap-5">
+            <div class="flex justify-center items-center">
+                <!-- location name and flag -->
+                <p class="text-3xl" id="location_area_2">Location</p>
+                <img src="india.png" alt="falied" class="ml-2">
+            </div>
+            <div class="text-2xl" id="weather_condition_2">
+                <!-- weather condition -->
+                condition
+            </div>
+
+            <div class="text-4xl" id="temp_render_2">
+                <!-- temperature -->
+                temp
+            </div>
+            <div class="flex gap-4 flex-wrap   items-center justify-center mt-5">
+                <!-- three divs container of weather data -->
+                <div class="bg-[#dbe2ef57] w-40 h-28 flex flex-col justify-center  items-center">
+                    <!-- box1 ****wind speed**** -->
+                    <img src="wind.png" class="w-10" alt="stateimg">
+                    <p class="text-2xl">WINDSPEED</p>
+                    <p id="wind_speed_value_2">statevalue</p>
+                </div>
+                <div class="bg-[#dbe2ef57]  w-40 h-28 flex flex-col justify-center  items-center">
+                    <!-- box2 -->
+                    <img src="hmidity.png" class="w-10" alt="stateimg">
+                    <p class="text-2xl">HUMIDITY</p>
+                    <p id="humidity_value_2">statevalue</p>
+                </div>
+                <div class="bg-[#dbe2ef57]   w-40 h-28 flex flex-col justify-center  items-center">
+                    <!-- box3 -->
+                    <img src="clouds.png" class="w-10" alt="stateimg">
+                    <p class="text-2xl">CLOUDS</p>
+                    <p id="clouds_value_2">statevalue</p>
+                </div>
+            </div>
         </div>
         <!-- weather data container on main page -->
         <div id="your_weather_container"
@@ -57,10 +97,7 @@
                 <!-- weather condition -->
                 condition
             </div>
-            <div class="mt-2">
-                <!-- weather condition image -->
-                <img src="" alt="falied">
-            </div>
+
             <div class="text-4xl" id="temp_render">
                 <!-- temperature -->
                 temp

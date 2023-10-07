@@ -15,6 +15,17 @@ const windSpeedRender = document.getElementById("wind_speed_value");
 const humidityRender = document.getElementById("humidity_value");
 const cloudsRender = document.getElementById("clouds_value");
 const loader = document.getElementById("loader");
+const inputCity = document.getElementById("city_input");
+const searchWeatherData = document.getElementById("search_weather_render");
+const searchButton = document.getElementById("search_button");
+const locationArea2 = document.getElementById("location_area_2");
+const weatherCondition2 = document.getElementById("weather_condition_2");
+const temperatureRender2 = document.getElementById("temp_render_2");
+const windSpeedRender2 = document.getElementById("wind_speed_value_2");
+const humidityRender2 = document.getElementById("humidity_value_2");
+const cloudsRender2 = document.getElementById("clouds_value_2");
+const searchWeatherRender = document.getElementById("search_weather_render");
+
 // const place = document.getElementById("place");
 // const weatherState = document.getElementById("weather_state");
 // const temp = document.getElementById("temperature");
@@ -45,12 +56,17 @@ searchWeatherButton.addEventListener("click", () => {
 yourWeatherButton.addEventListener("click", () => {
   yourWeatherButton.classList.add("currentTab");
   searchWeatherButton.classList.remove("currentTab");
+  searchWeatherData.classList.add("hidden");
+
   hideSearchWeatherUT();
   showYourWeatherUI();
 });
 grantAccessButton.addEventListener("click", () => {
   getLocation();
   // alert("dasd");
+});
+searchButton.addEventListener("click", () => {
+  searchedCityWeatherDetails();
 });
 
 //function to access the current location of the user
@@ -103,20 +119,29 @@ function renderWeather(result) {
   cloudsRender.innerText = `${res.current.cloud} %`;
 }
 
-/*const weatherCondition = document.getElementById("weatherCondition");
-let cityname = " mumbai";
-let APIkey = "853a4c045218afcc786fa370edfef2ff";
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${APIkey}&units=metric`;
+function searchedCityWeatherDetails() {
+  let city = inputCity.value;
+  getWeatherData(city);
+}
 
-async function getWeatherData() {
+//  let APIkey = "853a4c045218afcc786fa370edfef2ff";
+
+async function getWeatherData(city) {
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}&units=metric`;
   //this function brings the weather deatils from the api server
   try {
     const response = await fetch(url);
     const jsonResponse = await response.json();
     console.log(jsonResponse);
+    locationArea2.innerText = jsonResponse.name;
+    weatherCondition2.innerText = jsonResponse.weather[0].description;
+    temperatureRender2.innerText = `${jsonResponse.main.temp} 	\xB0 C`;
+    windSpeedRender2.innerText = `${jsonResponse.wind.speed} kph`;
+    humidityRender2.innerText = `${jsonResponse.main.humidity} %`;
+    cloudsRender2.innerText = `${jsonResponse.clouds.all} %`;
+    searchWeatherData.classList.remove("hidden");
   } catch (err) {
     console.log("Error: ", err);
   }
 }
-getWeatherData();
-*/
+// getWeatherData();
