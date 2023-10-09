@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    <h1 class="bg-slate-500">game</h1>
+    <!-- top level body(wrapper class) -->
+    <div class="wrapper">
+        <div>
+            <!-- player number area -->
+            <p
+                class="bg-[#ffffff47] inline-block py-2 pl-2 pr-2 rounded-lg w-44 text-center backdrop-blur-lg text-white ml-[50%] -translate-x-[50%] mt-6">
+                Current Player <span id="player_id" class="text-xl ">..</span></p>
+        </div>
+
+        <div
+            class="grid grid-cols-3 bg-[#ffffff47] aspect-square w-72 ml-[50%] -translate-x-[50%] place-content-center mt-28 rounded-lg text-white cursor-pointer  ">
+            <!-- game box area -->
+            <div class="border-r-2 border-white border-b-2 flex justify-center items-center text-5xl h-20 cursor-pointer game_box"
+                id="box1">
+            </div>
+            <div class="border-r-2 border-white border-b-2 flex justify-center items-center text-5xl cursor-pointer  game_box "
+                id="box2">
+            </div>
+            <div class="border-b-2 border-white flex justify-center items-center text-5xl cursor-pointer game_box"
+                id="box3">
+            </div>
+            <div class="border-r-2 border-white border-b-2 flex justify-center items-center text-5xl h-20 cursor-pointer game_box"
+                id="box4">
+            </div>
+            <div class="border-r-2 border-white border-b-2 flex justify-center items-center text-5xl cursor-pointer game_box"
+                id="box5">
+            </div>
+            <div class="border-b-2 border-white  flex justify-center items-center text-5xl  cursor-pointer game_box "
+                id="box6">
+            </div>
+            <div class=" h-20 border-r-2 border-white flex justify-center items-center text-5xl game_box" id="box7">
+            </div>
+            <div class="border-r-2 border-white flex justify-center items-center text-5xl cursor-pointer game_box"
+                id="box8">
+            </div>
+            <div class=" flex justify-center items-center text-5xl cursor-pointer game_box" id="box9"></div>
+
+        </div>
+        <div>
+            <!-- new game button -->
+            <button
+                class="bg-[#ffffff47] inline-block py-2 pl-2 pr-2 rounded-lg w-28 text-center backdrop-blur-lg text-white  ml-[50%] -translate-x-[50%] absolute bottom-10" id="new_game">New
+                Game</button>
+        </div>
+
+    </div>
+
+
+
+    <!-- *******javascript link***********   -->
+    <script src="app.js"></script>
 </body>
+
 </html>
